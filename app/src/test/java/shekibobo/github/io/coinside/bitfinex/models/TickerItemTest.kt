@@ -22,6 +22,7 @@ class TickerItemTest {
   private val moshi = Moshi.Builder().forBitfinex()
   private val tickerItem: TickerItem = moshi.fromJson<TickerItem>(tickerItemJson)!!
 
+  @Test fun `correctly excludes symbol`() = expect(null) { tickerItem.symbol }
   @Test fun `correctly parses mid`() = expect("244.755") { tickerItem.mid }
   @Test fun `correctly parses bid`() = expect("244.75") { tickerItem.bid }
   @Test fun `correctly parses ask`() = expect("244.76") { tickerItem.ask }
