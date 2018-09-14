@@ -19,8 +19,13 @@ class CurrencyTickerViewModel(private val currencyRepository: CurrencyRepository
   fun fetchCurrencies() {
     currencyRepository.allTickers()
       .subscribe(
-        { currencies.postValue(it) },
-        { Timber.e(it) }
+        { list ->
+          currencies.postValue(list.sortedByDescending { it.high.toFloat() })
+        },
+        {
+          Timber.e(it)
+          currencies.postValue(listOf())
+        }
       )
       .disposedBy(disposer)
   }
