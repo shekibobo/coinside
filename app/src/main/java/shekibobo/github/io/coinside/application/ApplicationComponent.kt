@@ -3,6 +3,7 @@ package shekibobo.github.io.coinside.application
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
+import okhttp3.HttpUrl
 import shekibobo.github.io.coinside.bitfinex.BitfinexModule
 import javax.inject.Singleton
 
@@ -21,5 +22,6 @@ interface ApplicationComponent {
     fun build(): ApplicationComponent
 
     @BindsInstance fun application(application: Application): Builder
+    @BindsInstance fun currenciesBaseUrl(url: HttpUrl): Builder
   }
 }

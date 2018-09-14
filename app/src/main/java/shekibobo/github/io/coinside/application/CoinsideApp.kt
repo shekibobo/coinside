@@ -5,6 +5,7 @@ import android.app.Application
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
+import okhttp3.HttpUrl
 import shekibobo.github.io.coinside.BuildConfig
 import timber.log.Timber
 import javax.inject.Inject
@@ -13,6 +14,7 @@ class CoinsideApp : Application(), HasActivityInjector {
   private val component: ApplicationComponent by lazy {
     DaggerApplicationComponent.builder()
       .application(this)
+      .currenciesBaseUrl(HttpUrl.parse("https://api.bitfinex.com/")!!)
       .build()
   }
 
