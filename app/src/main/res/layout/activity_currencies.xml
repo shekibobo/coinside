@@ -6,4 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.currencies.CurrenciesActivity"
-    />
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currenciesTicker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:listitem="@layout/list_item_currency_price"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
