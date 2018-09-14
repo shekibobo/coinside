@@ -1,15 +1,16 @@
 package shekibobo.github.io.coinside.bitfinex
 
-typealias CryptoSymbol = String
-
-object CryptoSymbols {
-  const val BITCOIN = "BTCUSD"
-  const val BITCOIN_CLASSIC = "BCCUSD"
-  const val ETHERIUM = "ETHUSD"
-  const val LIGHTCOIN = "LTCUSD"
-  const val NEO = "NEOUSD"
-}
+import io.reactivex.Single
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Path
+import shekibobo.github.io.coinside.bitfinex.models.CryptoSymbol
+import shekibobo.github.io.coinside.bitfinex.models.TickerItem
 
 interface BitfinexApi {
-  fun ticker(symbol: CryptoSymbol)
+  @GET("v1/pubticker/{symbol}")
+  fun ticker(@Path("symbol") symbol: CryptoSymbol): Single<Response<TickerItem>>
+
+  @GET("v1/symbols")
+  fun symbols(): Single<Response<List<CryptoSymbol>>>
 }
