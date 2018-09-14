@@ -1,4 +1,4 @@
-package shekibobo.github.io.coinside.ui.main
+package shekibobo.github.io.coinside.ui.currencies
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
