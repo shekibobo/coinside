@@ -12,6 +12,7 @@ class CurrencyRepository @Inject constructor(private val api: BitfinexApi) {
     return api.symbols()
       .toObservable()
       .flatMapIterable { it.body() }
+      .take(10)
       .flatMapSingle { symbol ->
         api.ticker(symbol).map { it.bodyOrError().copy(symbol = symbol) }
       }
