@@ -35,11 +35,14 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'com.google.dagger:dagger:2.16'
     implementation 'com.google.dagger:dagger-android:2.16'
-    kapt "com.google.dagger:dagger-compiler:2.16"
-    implementation "com.google.dagger:dagger-android-support:2.16"
-    kapt "com.google.dagger:dagger-android-processor:2.16"
+    kapt 'com.google.dagger:dagger-compiler:2.16'
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    kapt 'com.google.dagger:dagger-android-processor:2.16'
+
+    implementation 'com.squareup.moshi:moshi-kotlin:1.6.0'
 
     testImplementation 'junit:junit:4.12'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test:1.2.70'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
