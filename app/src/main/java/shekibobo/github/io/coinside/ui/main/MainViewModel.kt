@@ -1,7 +1,0 @@
-package shekibobo.github.io.coinside.ui.main
-
-import androidx.lifecycle.ViewModel
-
-class MainViewModel : ViewModel() {
-  // TODO: Implement the ViewModel
-}
