@@ -3,4 +3,5 @@
     <string name="ticker_high">High: %s</string>
     <string name="ticker_mid">Mid: %s</string>
     <string name="ticker_low">Low: %s</string>
+    <string name="currency_logo">Currency Logo</string>
 </resources>
