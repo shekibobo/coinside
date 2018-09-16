@@ -7,6 +7,7 @@ import dagger.Reusable
 import io.reactivex.disposables.CompositeDisposable
 import shekibobo.github.io.coinside.bitfinex.CurrencyRepository
 import shekibobo.github.io.coinside.bitfinex.models.TickerItem
+import shekibobo.github.io.coinside.bitfinex.models.filteredSymbols
 import shekibobo.github.io.coinside.extensions.disposedBy
 import timber.log.Timber
 import javax.inject.Inject
@@ -17,7 +18,7 @@ class CurrencyTickerViewModel(private val currencyRepository: CurrencyRepository
   private val disposer: CompositeDisposable = CompositeDisposable()
 
   fun fetchCurrencies() {
-    currencyRepository.allTickers()
+    currencyRepository.allTickers(filteredSymbols)
       .subscribe(
         { list ->
           currencies.postValue(list.sortedByDescending { it.high.toFloat() })
