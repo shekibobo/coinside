@@ -12,4 +12,15 @@ data class TickerItem(
   val high: Price = DEFAULT_PRICE,
   val volume: Price = DEFAULT_PRICE,
   val timestamp: TimeStamp = "0.0"
-)
+) {
+  val name: String?
+    get() = when (symbol) {
+      CRYPTO_SYMBOL_BITCOIN -> "Bitcoin"
+      CRYPTO_SYMBOL_BITCOIN_CASH -> "Bitcoin Cash"
+      CRYPTO_SYMBOL_ETHEREUM -> "Ethereum"
+      CRYPTO_SYMBOL_LITECOIN -> "Litecoin"
+      CRYPTO_SYMBOL_NEO -> "Neo"
+      else -> symbol?.removeSuffix("usd")?.capitalize()
+
+    }
+}

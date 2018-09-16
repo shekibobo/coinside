@@ -11,25 +11,35 @@
     app:cardCornerRadius="@dimen/cardview_default_radius"
     app:cardElevation="@dimen/cardview_default_elevation"
     app:cardUseCompatPadding="true"
-    app:contentPadding="@dimen/default_card_padding"
-    >
+    app:contentPadding="@dimen/default_card_padding">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/currencyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_card_padding"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            app:layout_constraintBottom_toTopOf="@id/currencySymbol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bitcoin" />
 
         <TextView
             android:id="@+id/currencySymbol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_card_padding"
             android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="btcusd"
-            />
+            app:layout_constraintTop_toBottomOf="@id/currencyName"
+            tools:text="btcusd" />
 
         <TextView
             android:id="@+id/currencyHigh"
@@ -38,8 +48,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="High: 485.22"
-            />
+            tools:text="High: 485.22" />
 
         <TextView
             android:id="@+id/currencyMid"
@@ -49,8 +58,7 @@
             app:layout_constraintBottom_toTopOf="@id/currencyLow"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/currencyHigh"
-            tools:text="Mid: 484.22"
-            />
+            tools:text="Mid: 484.22" />
 
         <TextView
             android:id="@+id/currencyLow"
@@ -60,8 +68,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/currencyMid"
-            tools:text="Low: 483.22"
-            />
+            tools:text="Low: 483.22" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
