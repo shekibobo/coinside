@@ -18,13 +18,19 @@
         tools:ignore="GoogleAppIndexingWarning"
         >
 
-        <activity android:name=".ui.currencies.CurrenciesActivity">
+        <activity android:name=".ui.currencies.CurrenciesActivity" />
+
+        <activity-alias
+            android:name="Launcher"
+            android:targetActivity=".ui.currencies.CurrenciesActivity"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
     </application>
 
 </manifest>
