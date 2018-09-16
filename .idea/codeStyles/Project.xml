@@ -1,5 +1,31 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <AndroidXmlCodeStyleSettings>
+      <option name="USE_CUSTOM_SETTINGS" value="true" />
+      <option name="LAYOUT_SETTINGS">
+        <value>
+          <option name="INSERT_LINE_BREAK_BEFORE_NAMESPACE_DECLARATION" value="true" />
+          <option name="INSERT_LINE_BREAK_AFTER_LAST_ATTRIBUTE" value="true" />
+        </value>
+      </option>
+      <option name="MANIFEST_SETTINGS">
+        <value>
+          <option name="INSERT_LINE_BREAK_BEFORE_NAMESPACE_DECLARATION" value="true" />
+          <option name="INSERT_LINE_BREAK_AFTER_LAST_ATTRIBUTE" value="true" />
+        </value>
+      </option>
+      <option name="VALUE_RESOURCE_FILE_SETTINGS">
+        <value>
+          <option name="WRAP_ATTRIBUTES" value="2" />
+        </value>
+      </option>
+      <option name="OTHER_SETTINGS">
+        <value>
+          <option name="INSERT_LINE_BREAK_BEFORE_NAMESPACE_DECLARATION" value="true" />
+          <option name="INSERT_LINE_BREAK_AFTER_LAST_ATTRIBUTE" value="true" />
+        </value>
+      </option>
+    </AndroidXmlCodeStyleSettings>
     <DBN-PSQL>
       <case-options enabled="false">
         <option name="KEYWORD_CASE" value="lower" />
@@ -73,5 +99,13 @@
         <option name="ITERATION_ELEMENTS_WRAPPING" value="chop_down_if_not_single" />
       </formatting-settings>
     </DBN-SQL>
+    <XML>
+      <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+    </XML>
+    <codeStyleSettings language="XML">
+      <indentOptions>
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+      </indentOptions>
+    </codeStyleSettings>
   </code_scheme>
 </component>

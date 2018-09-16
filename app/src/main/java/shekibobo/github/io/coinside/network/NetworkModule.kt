@@ -13,7 +13,8 @@ import javax.inject.Singleton
 
 @Module
 class NetworkModule {
-  @Provides @Singleton fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+  @Provides @Singleton
+  fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
     return OkHttpClient.Builder()
       .connectTimeout(10, TimeUnit.SECONDS)
       .readTimeout(10, TimeUnit.SECONDS)
